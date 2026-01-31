@@ -1,0 +1,7 @@
+{
+  "name": "MenuGenius",
+  "description": "Professional AI-powered menu engineering platform for restaurant owners and managers to optimize profitability and performance.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

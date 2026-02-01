@@ -4,7 +4,7 @@ AI-powered menu engineering platform that transforms restaurant menu photos into
 
 **Live Demo:** https://ai.studio/apps/drive/1Xf4mAedrdm3OjnSRAx8EeGOdeXqcyPmy  
 **Source Code:** https://github.com/qazifabiahoq/MenuGenius  
-**Demo Video:** [Coming soon]
+**Demo Video:** https://youtu.be/GeD3kEED1fI?si=MvzFrKAeRNzh71CG
 
 ## What It Does
 
@@ -483,7 +483,7 @@ All revenue projections validated against empirical restaurant performance data.
 
 **Live Application:** https://ai.studio/apps/drive/1Xf4mAedrdm3OjnSRAx8EeGOdeXqcyPmy  
 **Source Code:** https://github.com/qazifabiahoq/MenuGenius  
-**Demo Video:** [Recording in progress]  
+**Demo Video:** https://youtu.be/GeD3kEED1fI?si=MvzFrKAeRNzh71CG
 **Hackathon:** https://gemini3hackathon.devpost.com
 
 ## License

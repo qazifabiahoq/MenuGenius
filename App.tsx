@@ -384,7 +384,7 @@ const App: React.FC = () => {
             <div className="text-center mb-20">
               <span className="text-xs font-black text-[#D4AF37] uppercase tracking-[0.3em] mb-4 block">Why MenuGenius</span>
               <h2 className="text-5xl font-bold text-[#0A192F] mb-6 brand-font">Everything You Need to<br />Run a More Profitable Kitchen</h2>
-              <p className="text-slate-500 text-xl max-w-2xl mx-auto leading-relaxed font-medium">No spreadsheets. No consultants. Just upload your menu and get a complete picture of what's working — and what's quietly costing you.</p>
+              <p className="text-slate-500 text-xl max-w-2xl mx-auto leading-relaxed font-medium">No spreadsheets. No consultants. Just upload your menu and get a complete picture of what's working and what's quietly costing you.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="p-10 rounded-[2rem] border border-slate-100 hover:border-[#D4AF37]/40 hover:shadow-xl transition-all group">
@@ -392,14 +392,14 @@ const App: React.FC = () => {
                   <Trophy size={28} />
                 </div>
                 <h3 className="text-xl font-bold text-[#0A192F] mb-3 brand-font">Find Your Hidden Winners</h3>
-                <p className="text-slate-500 leading-relaxed font-medium">See at a glance which dishes are actually making you money — not just the ones selling most. Some of your busiest items may be your least profitable.</p>
+                <p className="text-slate-500 leading-relaxed font-medium">See at a glance which dishes are actually making you money, not just the ones selling most. Some of your busiest items may be your least profitable.</p>
               </div>
               <div className="p-10 rounded-[2rem] border border-slate-100 hover:border-[#D4AF37]/40 hover:shadow-xl transition-all group">
                 <div className="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <DollarSign size={28} />
                 </div>
                 <h3 className="text-xl font-bold text-[#0A192F] mb-3 brand-font">Price Every Dish Smarter</h3>
-                <p className="text-slate-500 leading-relaxed font-medium">Discover which items are underpriced and by how much. Our AI flags every pricing gap so you can make changes customers won't even notice — but your margins will.</p>
+                <p className="text-slate-500 leading-relaxed font-medium">Discover which items are underpriced and by how much. Our AI flags every pricing gap so you can make changes customers won't even notice. But your margins will.</p>
               </div>
               <div className="p-10 rounded-[2rem] border border-slate-100 hover:border-[#D4AF37]/40 hover:shadow-xl transition-all group">
                 <div className="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -517,10 +517,10 @@ const App: React.FC = () => {
                 <span className="text-xs font-black text-[#D4AF37] uppercase tracking-[0.3em] mb-6 block">Our Story</span>
                 <h2 className="text-5xl font-bold text-white mb-8 brand-font leading-tight">The Menu Consultant You Always Needed.<br />But Could Never Afford.</h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6 font-medium">
-                  Every week, thousands of restaurant owners walk past profit they can't see. They know which dishes their guests love. They know which nights are busy. But most have never had a clear picture of which items on their menu are actually making money — and which are quietly eating their margins.
+                  Every week, thousands of restaurant owners walk past profit they can't see. They know which dishes their guests love. They know which nights are busy. But most have never had a clear picture of which items on their menu are actually making money, and which are quietly eating their margins.
                 </p>
                 <p className="text-slate-400 text-lg leading-relaxed mb-10 font-medium">
-                  We built MenuGenius to change that. The same analysis that hospitality consultants charge thousands for — done in 60 seconds, for the cost of a few covers.
+                  We built MenuGenius to change that. The same analysis that hospitality consultants charge thousands for, done in 60 seconds, for the cost of a few covers.
                 </p>
                 <div className="flex flex-wrap items-center gap-6 pt-8 border-t border-white/10">
                   <div className="flex items-center gap-2 text-[10px] font-black text-slate-500 uppercase tracking-widest">

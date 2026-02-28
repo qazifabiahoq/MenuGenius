@@ -1,8 +1,8 @@
 # MenuGenius
 
 AI-powered menu engineering platform that transforms restaurant menu photos into comprehensive profitability reports using Google's Gemini 3 Flash Preview multimodal AI.
-
-**Live Demo:** https://ai.studio/apps/drive/1Xf4mAedrdm3OjnSRAx8EeGOdeXqcyPmy  
+**Live Demo:** https://menu-genius-eosin.vercel.app/
+**Live AI Studio Demo For Hackathon:** https://ai.studio/apps/drive/1Xf4mAedrdm3OjnSRAx8EeGOdeXqcyPmy  
 **Source Code:** https://github.com/qazifabiahoq/MenuGenius  
 **Demo Video:** https://youtu.be/GeD3kEED1fI?si=MvzFrKAeRNzh71CG
 

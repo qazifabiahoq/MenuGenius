@@ -515,12 +515,12 @@ const App: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               <div>
                 <span className="text-xs font-black text-[#D4AF37] uppercase tracking-[0.3em] mb-6 block">Our Story</span>
-                <h2 className="text-5xl font-bold text-white mb-8 brand-font leading-tight">Built for the Restaurant Owner.<br />Not the Consultant.</h2>
+                <h2 className="text-5xl font-bold text-white mb-8 brand-font leading-tight">The Menu Consultant You Always Needed.<br />But Could Never Afford.</h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6 font-medium">
-                  Restaurant owners work 70-hour weeks. You shouldn't need to hire a $5,000-a-week menu consultant to figure out why your margins aren't where they should be.
+                  Every week, thousands of restaurant owners walk past profit they can't see. They know which dishes their guests love. They know which nights are busy. But most have never had a clear picture of which items on their menu are actually making money — and which are quietly eating their margins.
                 </p>
                 <p className="text-slate-400 text-lg leading-relaxed mb-10 font-medium">
-                  We took the same menu engineering frameworks used by the world's top hospitality consultants and put them in your hands — for the cost of a few covers. Take a photo of your menu and get a boardroom-quality analysis in under a minute.
+                  We built MenuGenius to change that. The same analysis that hospitality consultants charge thousands for — done in 60 seconds, for the cost of a few covers.
                 </p>
                 <div className="flex flex-wrap items-center gap-6 pt-8 border-t border-white/10">
                   <div className="flex items-center gap-2 text-[10px] font-black text-slate-500 uppercase tracking-widest">

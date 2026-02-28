@@ -152,6 +152,58 @@ Renders executive summary, BCG matrix, profit charts, and detailed recommendatio
 
 **Total Time:** 30-60 seconds from upload to complete report.
 
+## Deployment
+
+MenuGenius is a static Vite/React app and can be deployed to any static hosting platform. **Vercel** is the easiest option.
+
+### Deploy to Vercel (Recommended)
+
+1. **Push your code to GitHub** (already done at https://github.com/qazifabiahoq/MenuGenius)
+
+2. **Get a Gemini API key** from [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+3. **Import to Vercel:**
+   - Go to [vercel.com](https://vercel.com) and sign in with GitHub
+   - Click **"Add New Project"** → select your `MenuGenius` repo
+   - Vercel auto-detects Vite — no build config changes needed
+
+4. **Set the environment variable:**
+   - In the Vercel project settings, go to **Settings → Environment Variables**
+   - Add: `GEMINI_API_KEY` = `<your key from step 2>`
+
+5. Click **Deploy** — your app will be live at `https://your-project.vercel.app`
+
+### Deploy to Netlify
+
+1. Go to [netlify.com](https://www.netlify.com) → **"Add new site" → "Import an existing project"**
+2. Connect your GitHub repo
+3. Set build settings:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+4. Under **Site settings → Environment variables**, add `GEMINI_API_KEY`
+5. Deploy
+
+### Run Locally
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/qazifabiahoq/MenuGenius.git
+cd MenuGenius
+
+# 2. Install dependencies
+npm install
+
+# 3. Set your API key
+cp .env.example .env
+# Edit .env and add your GEMINI_API_KEY
+
+# 4. Start the dev server
+npm run dev
+# Open http://localhost:3000
+```
+
+> **Note on API Key Security:** This is a client-side app, so the API key is embedded in the built JavaScript bundle. For a production app with heavy usage, consider adding a backend proxy to protect your key and add rate limiting.
+
 ## Technology Stack
 
 **AI/ML:**

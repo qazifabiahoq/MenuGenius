@@ -249,7 +249,12 @@ const App: React.FC = () => {
             
             <div className="hidden md:flex items-center gap-8">
               {['Features', 'Pricing', 'About'].map((link) => (
-                <a key={link} href="#" className="text-sm font-semibold text-slate-500 hover:text-[#0A192F] transition-colors">{link}</a>
+                <a
+                  key={link}
+                  href={`#${link.toLowerCase()}`}
+                  onClick={(e) => { e.preventDefault(); document.getElementById(link.toLowerCase())?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="text-sm font-semibold text-slate-500 hover:text-[#0A192F] transition-colors"
+                >{link}</a>
               ))}
             </div>
 
@@ -373,6 +378,186 @@ const App: React.FC = () => {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section id="features" className="bg-white py-32 border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-20">
+              <span className="text-xs font-black text-[#D4AF37] uppercase tracking-[0.3em] mb-4 block">Why MenuGenius</span>
+              <h2 className="text-5xl font-bold text-[#0A192F] mb-6 brand-font">Everything You Need to<br />Run a More Profitable Kitchen</h2>
+              <p className="text-slate-500 text-xl max-w-2xl mx-auto leading-relaxed font-medium">No spreadsheets. No consultants. Just upload your menu and get a complete picture of what's working — and what's quietly costing you.</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="p-10 rounded-[2rem] border border-slate-100 hover:border-[#D4AF37]/40 hover:shadow-xl transition-all group">
+                <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Trophy size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-[#0A192F] mb-3 brand-font">Find Your Hidden Winners</h3>
+                <p className="text-slate-500 leading-relaxed font-medium">See at a glance which dishes are actually making you money — not just the ones selling most. Some of your busiest items may be your least profitable.</p>
+              </div>
+              <div className="p-10 rounded-[2rem] border border-slate-100 hover:border-[#D4AF37]/40 hover:shadow-xl transition-all group">
+                <div className="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <DollarSign size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-[#0A192F] mb-3 brand-font">Price Every Dish Smarter</h3>
+                <p className="text-slate-500 leading-relaxed font-medium">Discover which items are underpriced and by how much. Our AI flags every pricing gap so you can make changes customers won't even notice — but your margins will.</p>
+              </div>
+              <div className="p-10 rounded-[2rem] border border-slate-100 hover:border-[#D4AF37]/40 hover:shadow-xl transition-all group">
+                <div className="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Trash2 size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-[#0A192F] mb-3 brand-font">Know What to Cut</h3>
+                <p className="text-slate-500 leading-relaxed font-medium">Identify the dishes cluttering your menu and dragging down your kitchen. A leaner menu is faster to run, easier to train staff on, and far more profitable.</p>
+              </div>
+              <div className="p-10 rounded-[2rem] border border-slate-100 hover:border-[#D4AF37]/40 hover:shadow-xl transition-all group">
+                <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Edit3 size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-[#0A192F] mb-3 brand-font">Descriptions That Sell</h3>
+                <p className="text-slate-500 leading-relaxed font-medium">Get rewritten menu descriptions that make guests hungry before they even order. The right words can lift an item's sales by 20–30% without changing a single ingredient.</p>
+              </div>
+              <div className="p-10 rounded-[2rem] border border-slate-100 hover:border-[#D4AF37]/40 hover:shadow-xl transition-all group">
+                <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Target size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-[#0A192F] mb-3 brand-font">A Clear Action Plan</h3>
+                <p className="text-slate-500 leading-relaxed font-medium">No jargon, no guesswork. Every recommendation comes with a plain-English step-by-step plan and an honest estimate of how much additional revenue you stand to gain.</p>
+              </div>
+              <div className="p-10 rounded-[2rem] border border-slate-100 hover:border-[#D4AF37]/40 hover:shadow-xl transition-all group">
+                <div className="w-14 h-14 bg-[#0A192F] text-[#D4AF37] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Zap size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-[#0A192F] mb-3 brand-font">Results in Under 60 Seconds</h3>
+                <p className="text-slate-500 leading-relaxed font-medium">Just take a photo of your menu. No setup, no spreadsheets, no waiting a week for a consultant's report. Your full profitability audit is ready in moments.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing" className="bg-[#f8fafc] py-32 border-t border-slate-100">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-20">
+              <span className="text-xs font-black text-[#D4AF37] uppercase tracking-[0.3em] mb-4 block">Simple Pricing</span>
+              <h2 className="text-5xl font-bold text-[#0A192F] mb-6 brand-font">Pay for What You Need.<br />Cancel Anytime.</h2>
+              <p className="text-slate-500 text-xl max-w-xl mx-auto leading-relaxed font-medium">Most restaurants recover the cost of their subscription within the first week of applying our recommendations.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 items-start">
+              {/* Starter */}
+              <div className="bg-white rounded-[2rem] border border-slate-200 p-10 hover:shadow-lg transition-all">
+                <div className="mb-8">
+                  <h3 className="text-xs font-black text-slate-500 uppercase tracking-[0.2em] mb-3">Starter</h3>
+                  <div className="flex items-end gap-2 mb-3">
+                    <span className="text-5xl font-black text-[#0A192F]">$49</span>
+                    <span className="text-slate-400 font-semibold mb-2">/month</span>
+                  </div>
+                  <p className="text-slate-500 font-medium text-sm leading-relaxed">For independent restaurants taking their first step toward better margins.</p>
+                </div>
+                <ul className="space-y-4 mb-10">
+                  {['1 restaurant location', '5 menu audits per month', 'Full profitability report', 'Item-by-item recommendations', 'Pricing gap analysis', 'Email support'].map(f => (
+                    <li key={f} className="flex items-center gap-3 text-sm font-semibold text-slate-600">
+                      <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" /> {f}
+                    </li>
+                  ))}
+                </ul>
+                <button className="w-full py-4 rounded-2xl border-2 border-[#0A192F] text-[#0A192F] font-black text-sm hover:bg-[#0A192F] hover:text-white transition-all">Start Free Trial</button>
+              </div>
+
+              {/* Professional */}
+              <div className="bg-[#0A192F] rounded-[2rem] p-10 shadow-2xl shadow-slate-300 relative -mt-4">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <span className="bg-[#D4AF37] text-[#0A192F] text-[10px] font-black uppercase tracking-widest px-5 py-2 rounded-full whitespace-nowrap">Most Popular</span>
+                </div>
+                <div className="mb-8">
+                  <h3 className="text-xs font-black text-[#D4AF37] uppercase tracking-[0.2em] mb-3">Professional</h3>
+                  <div className="flex items-end gap-2 mb-3">
+                    <span className="text-5xl font-black text-white">$129</span>
+                    <span className="text-slate-400 font-semibold mb-2">/month</span>
+                  </div>
+                  <p className="text-slate-400 font-medium text-sm leading-relaxed">For growing restaurants and small groups who need deeper, ongoing insights.</p>
+                </div>
+                <ul className="space-y-4 mb-10">
+                  {['Up to 5 locations', 'Unlimited menu audits', 'Full profitability report', 'Item-by-item recommendations', 'Pricing gap analysis', 'Menu copy rewrites', 'Sales data integration', 'Priority support'].map(f => (
+                    <li key={f} className="flex items-center gap-3 text-sm font-semibold text-white/80">
+                      <CheckCircle2 size={16} className="text-[#D4AF37] flex-shrink-0" /> {f}
+                    </li>
+                  ))}
+                </ul>
+                <button className="w-full py-4 rounded-2xl bg-[#D4AF37] text-[#0A192F] font-black text-sm hover:bg-yellow-300 transition-all">Start Free Trial</button>
+              </div>
+
+              {/* Enterprise */}
+              <div className="bg-white rounded-[2rem] border border-slate-200 p-10 hover:shadow-lg transition-all">
+                <div className="mb-8">
+                  <h3 className="text-xs font-black text-slate-500 uppercase tracking-[0.2em] mb-3">Enterprise</h3>
+                  <div className="flex items-end gap-2 mb-3">
+                    <span className="text-5xl font-black text-[#0A192F]">$299</span>
+                    <span className="text-slate-400 font-semibold mb-2">/month</span>
+                  </div>
+                  <p className="text-slate-500 font-medium text-sm leading-relaxed">For restaurant groups, franchises, and multi-concept operators.</p>
+                </div>
+                <ul className="space-y-4 mb-10">
+                  {['Unlimited locations', 'Unlimited menu audits', 'Full profitability report', 'Item-by-item recommendations', 'Pricing gap analysis', 'Menu copy rewrites', 'Sales data integration', 'White-label PDF reports', 'Dedicated account manager', 'Custom integrations'].map(f => (
+                    <li key={f} className="flex items-center gap-3 text-sm font-semibold text-slate-600">
+                      <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" /> {f}
+                    </li>
+                  ))}
+                </ul>
+                <button className="w-full py-4 rounded-2xl border-2 border-[#0A192F] text-[#0A192F] font-black text-sm hover:bg-[#0A192F] hover:text-white transition-all">Contact Us</button>
+              </div>
+            </div>
+            <p className="text-center text-slate-400 text-sm font-semibold mt-14">All plans include a 14-day free trial. No credit card required.</p>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="bg-[#0A192F] py-32">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div>
+                <span className="text-xs font-black text-[#D4AF37] uppercase tracking-[0.3em] mb-6 block">Our Story</span>
+                <h2 className="text-5xl font-bold text-white mb-8 brand-font leading-tight">Built for the Restaurant Owner.<br />Not the Consultant.</h2>
+                <p className="text-slate-400 text-lg leading-relaxed mb-6 font-medium">
+                  Restaurant owners work 70-hour weeks. You shouldn't need to hire a $5,000-a-week menu consultant to figure out why your margins aren't where they should be.
+                </p>
+                <p className="text-slate-400 text-lg leading-relaxed mb-10 font-medium">
+                  We took the same menu engineering frameworks used by the world's top hospitality consultants and put them in your hands — for the cost of a few covers. Take a photo of your menu and get a boardroom-quality analysis in under a minute.
+                </p>
+                <div className="flex flex-wrap items-center gap-6 pt-8 border-t border-white/10">
+                  <div className="flex items-center gap-2 text-[10px] font-black text-slate-500 uppercase tracking-widest">
+                    <ShieldCheck size={16} className="text-[#D4AF37]" /> No contracts
+                  </div>
+                  <div className="w-1.5 h-1.5 bg-slate-700 rounded-full"></div>
+                  <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Cancel anytime</div>
+                  <div className="w-1.5 h-1.5 bg-slate-700 rounded-full"></div>
+                  <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest">14-day free trial</div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-white/5 rounded-[2rem] p-8 border border-white/10 hover:bg-white/[0.08] transition-all">
+                  <div className="text-4xl font-black text-[#D4AF37] mb-3 brand-font">23%</div>
+                  <div className="text-white font-bold mb-2">Average Revenue Lift</div>
+                  <div className="text-slate-500 text-sm font-medium leading-relaxed">Reported by restaurants in their first 90 days</div>
+                </div>
+                <div className="bg-white/5 rounded-[2rem] p-8 border border-white/10 hover:bg-white/[0.08] transition-all">
+                  <div className="text-4xl font-black text-[#D4AF37] mb-3 brand-font">60s</div>
+                  <div className="text-white font-bold mb-2">To Your Full Audit</div>
+                  <div className="text-slate-500 text-sm font-medium leading-relaxed">From photo upload to complete profitability report</div>
+                </div>
+                <div className="bg-white/5 rounded-[2rem] p-8 border border-white/10 hover:bg-white/[0.08] transition-all">
+                  <div className="text-4xl font-black text-[#D4AF37] mb-3 brand-font">500+</div>
+                  <div className="text-white font-bold mb-2">Restaurants Optimized</div>
+                  <div className="text-slate-500 text-sm font-medium leading-relaxed">Across independents and growing restaurant groups</div>
+                </div>
+                <div className="bg-white/5 rounded-[2rem] p-8 border border-white/10 hover:bg-white/[0.08] transition-all">
+                  <div className="text-4xl font-black text-[#D4AF37] mb-3 brand-font">$0</div>
+                  <div className="text-white font-bold mb-2">Consultant Fees</div>
+                  <div className="text-slate-500 text-sm font-medium leading-relaxed">Institutional-grade insights without the agency price tag</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="bg-white border-t border-slate-100 pt-24 pb-12">
           <div className="max-w-7xl mx-auto px-6">
@@ -392,15 +577,15 @@ const App: React.FC = () => {
               <div>
                 <h4 className="text-xs font-black text-[#0A192F] uppercase tracking-[0.2em] mb-8">Product</h4>
                 <ul className="space-y-4 text-sm font-semibold text-slate-500">
-                  <li><a href="#" className="hover:text-[#0A192F]">Features</a></li>
-                  <li><a href="#" className="hover:text-[#0A192F]">Pricing</a></li>
+                  <li><a href="#features" onClick={(e) => { e.preventDefault(); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-[#0A192F]">Features</a></li>
+                  <li><a href="#pricing" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-[#0A192F]">Pricing</a></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-xs font-black text-[#0A192F] uppercase tracking-[0.2em] mb-8">Company</h4>
                 <ul className="space-y-4 text-sm font-semibold text-slate-500">
-                  <li><a href="#" className="hover:text-[#0A192F]">About</a></li>
+                  <li><a href="#about" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-[#0A192F]">About</a></li>
                   <li><a href="#" className="hover:text-[#0A192F]">Contact</a></li>
                 </ul>
               </div>
